@@ -11,6 +11,7 @@ export default function ForgotPassword() {
     e.preventDefault();
     setMessage('');
     setLoading(true);
+
     try {
       const res = await fetch(`${API_URL}/api/auth/forgot-password`, {
         method: 'POST',
@@ -20,7 +21,7 @@ export default function ForgotPassword() {
 
       const data = await res.json();
       if (res.ok) {
-        setMessage('✅ A password reset email has been sent.');
+        setMessage('✅ A reset code has been sent to your email.');
       } else {
         setMessage('❌ ' + (data.error || 'Server error.'));
       }
@@ -49,7 +50,7 @@ export default function ForgotPassword() {
           className="w-full p-3 bg-cyan-600 hover:bg-cyan-700 rounded font-bold transition"
           disabled={loading}
         >
-          {loading ? 'Sending...' : 'Send'}
+          {loading ? 'Sending...' : 'Send Code'}
         </button>
       </form>
 
