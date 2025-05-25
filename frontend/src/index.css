@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  /* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Glow Effects for Top 3 */
+.glow-gold {
+  box-shadow: 0 0 15px 3px #FFD700;
+}
+
+.glow-silver {
+  box-shadow: 0 0 15px 3px #C0C0C0;
+}
+
+.glow-bronze {
+  box-shadow: 0 0 15px 3px #cd7f32;
+}

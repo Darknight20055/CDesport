@@ -1,4 +1,15 @@
-node_modules
-frontend/
+# ignorer les dépendances
+node_modules/
+
+# ignorer les fichiers temporaires
+.DS_Store
+.env
+*.log
+
+# ignorer les IDE
+.vscode/
+.vs/
+
+# ignorer les fichiers de build
 build/
-src/
+dist/
