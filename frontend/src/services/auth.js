@@ -64,7 +64,6 @@ export const resendVerificationEmail = async (email) => {
   }
 };
 
-// ✅ Fonction corrigée pour vérifier le code reçu par email
 export const verifyEmailCode = async (email, code) => {
   try {
     const response = await fetch(`${API_URL}/api/auth/confirm-code`, {
@@ -82,6 +81,28 @@ export const verifyEmailCode = async (email, code) => {
     return data;
   } catch (error) {
     console.error('Verification error:', error);
+    throw error;
+  }
+};
+
+// ✅ Fonction pour réinitialiser le mot de passe avec un token
+export const resetPassword = async (token, password) => {
+  try {
+    const response = await fetch(`${API_URL}/api/auth/reset-password/${token}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }), // clé correcte
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Password reset failed');
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Reset password error:', error);
     throw error;
   }
 };
