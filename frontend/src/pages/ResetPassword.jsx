@@ -35,7 +35,7 @@ export default function ResetPassword() {
       const res = await fetch(`${API_URL}/api/auth/reset-password/${token}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ newPassword }),
+        body: JSON.stringify({ password: newPassword }), // ✅ clé correcte
       });
 
       const data = await res.json();
@@ -61,7 +61,13 @@ export default function ResetPassword() {
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-red-500 mb-4">❌ Invalid or expired reset link.</h1>
-          <p className="text-gray-400">Please request a new one from the <a href="/forgot-password" className="text-cyan-400 underline">Forgot Password</a> page.</p>
+          <p className="text-gray-400">
+            Please request a new one from the{' '}
+            <a href="/forgot-password" className="text-cyan-400 underline">
+              Forgot Password
+            </a>{' '}
+            page.
+          </p>
         </div>
       </div>
     );
