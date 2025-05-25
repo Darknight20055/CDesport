@@ -1,0 +1,18 @@
+{
+    "rewrites": [
+      { "source": "/reset-password/:token", "destination": "/" },
+      { "source": "/reset-success", "destination": "/" },
+      { "source": "/forgot-password", "destination": "/" },
+      { "source": "/confirm-code", "destination": "/" },
+      { "source": "/login", "destination": "/" },
+      { "source": "/signup", "destination": "/" },
+      { "source": "/account", "destination": "/" },
+      { "source": "/link-valorant", "destination": "/" },
+      { "source": "/competitions", "destination": "/" },
+      { "source": "/classement", "destination": "/" },
+      { "source": "/support", "destination": "/" },
+      { "source": "/admin", "destination": "/" },
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  }
+  
