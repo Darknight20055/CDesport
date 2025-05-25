@@ -64,10 +64,10 @@ export const resendVerificationEmail = async (email) => {
   }
 };
 
-// ✅ Nouvelle fonction pour vérifier le code reçu par email
+// ✅ Fonction corrigée pour vérifier le code reçu par email
 export const verifyEmailCode = async (email, code) => {
   try {
-    const response = await fetch(`${API_URL}/api/auth/verify`, {
+    const response = await fetch(`${API_URL}/api/auth/confirm-code`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, code }),
