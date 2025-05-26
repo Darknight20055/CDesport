@@ -15,7 +15,7 @@ export default function Home() {
       {/* 🔥 Contenu principal */}
       <div className="relative z-10 text-center">
         <img
-          src="/avatars/logo-cdesport.png"
+          src="/avatars/logo-CDesport.png"
           alt="CDesport Logo"
           className="w-40 md:w-48 mx-auto mb-4 drop-shadow-[0_0_25px_rgba(255,0,0,0.6)]"
         />
@@ -30,7 +30,7 @@ export default function Home() {
       {/* 🏆 Bloc Weekly Tournaments */}
       <div className="relative z-10 bg-[#111827]/90 rounded-2xl p-6 w-full max-w-md shadow-lg text-center">
         <img
-          src="/tournament-banner.jpg"
+          src="/tournois-banner.jpg"
           alt="Tournament Banner"
           className="w-full rounded-xl mb-4"
         />
