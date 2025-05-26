@@ -15,7 +15,7 @@ export default function Home() {
       {/* 🔥 Contenu principal */}
       <div className="relative z-10 text-center">
         <img
-          src="/avatars/logo-cdesport.png"
+          src="/avatars/logo%20CDesport.png"
           alt="CDesport Logo"
           className="w-40 md:w-48 mx-auto mb-4 drop-shadow-[0_0_25px_rgba(255,0,0,0.6)]"
         />
