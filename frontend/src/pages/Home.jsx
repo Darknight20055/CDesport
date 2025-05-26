@@ -9,14 +9,14 @@ export default function Home() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Overlay sombre pour améliorer la lisibilité */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      {/* 🎨 Overlay sombre allégé pour laisser ressortir le fond */}
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
 
       {/* 🔥 Contenu principal */}
       <div className="relative z-10 text-center">
         {/* 🔥 Logo + slogan */}
         <img
-          src="/avatars/logo CDesport.png"
+          src="/avatars/logo-cdesport.png"
           alt="CDesport Logo"
           className="w-40 md:w-48 mx-auto mb-4 drop-shadow-[0_0_25px_rgba(255,0,0,0.6)]"
         />
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
 
       {/* 🏆 Bloc Weekly Tournaments */}
-      <div className="relative z-10 bg-[#111827]/90 rounded-2xl border border-red-500 p-6 w-full max-w-md shadow-lg text-center">
+      <div className="relative z-10 bg-[#111827]/90 rounded-2xl p-6 w-full max-w-md shadow-lg text-center">
         <img
           src="/tournament-placeholder.jpg"
           alt="Tournament Banner"
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* 🧠 Bloc Leaderboard */}
-      <div className="relative z-10 bg-[#111827]/90 rounded-2xl border border-blue-500 p-6 w-full max-w-md shadow-lg text-center">
+      <div className="relative z-10 bg-[#111827]/90 rounded-2xl p-6 w-full max-w-md shadow-lg text-center">
         <img
           src="/leaderboard-placeholder.jpg"
           alt="Leaderboard"
