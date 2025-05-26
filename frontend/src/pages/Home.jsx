@@ -1,17 +1,22 @@
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 pt-16 pb-32 space-y-16 overflow-hidden">
-      
-      {/* 🎨 Néon rouge et bleu en arrière-plan */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-red-600 opacity-20 blur-3xl rounded-full animate-pulse-slow" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-600 opacity-20 blur-3xl rounded-full animate-pulse-slow" />
-      </div>
+    <div
+      className="relative flex flex-col items-center justify-center min-h-screen text-white px-4 pt-16 pb-32 space-y-16 overflow-hidden"
+      style={{
+        backgroundImage: "url('/avatars/fondhome.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay sombre pour améliorer la lisibilité */}
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
 
-      {/* 🔥 Logo + slogan */}
-      <div className="text-center">
+      {/* 🔥 Contenu principal */}
+      <div className="relative z-10 text-center">
+        {/* 🔥 Logo + slogan */}
         <img
-          src="/logo-cdesport.png"
+          src="/avatars/logo CDesport.png"
           alt="CDesport Logo"
           className="w-40 md:w-48 mx-auto mb-4 drop-shadow-[0_0_25px_rgba(255,0,0,0.6)]"
         />
@@ -24,7 +29,7 @@ export default function Home() {
       </div>
 
       {/* 🏆 Bloc Weekly Tournaments */}
-      <div className="bg-[#111827] rounded-2xl border border-red-500 p-6 w-full max-w-md shadow-lg text-center">
+      <div className="relative z-10 bg-[#111827]/90 rounded-2xl border border-red-500 p-6 w-full max-w-md shadow-lg text-center">
         <img
           src="/tournament-placeholder.jpg"
           alt="Tournament Banner"
@@ -38,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* 🧠 Bloc Leaderboard */}
-      <div className="bg-[#111827] rounded-2xl border border-blue-500 p-6 w-full max-w-md shadow-lg text-center">
+      <div className="relative z-10 bg-[#111827]/90 rounded-2xl border border-blue-500 p-6 w-full max-w-md shadow-lg text-center">
         <img
           src="/leaderboard-placeholder.jpg"
           alt="Leaderboard"

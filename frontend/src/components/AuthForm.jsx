@@ -39,7 +39,7 @@ export default function AuthForm({ setIsAuthenticated }) {
 
         localStorage.setItem("token", data.token);
         if (setIsAuthenticated) setIsAuthenticated(true);
-        navigate("/account");
+        navigate("/"); // ✅ redirection vers Home
       } else {
         await register(pseudo, cleanEmail, password);
         localStorage.setItem("pendingEmail", cleanEmail);
