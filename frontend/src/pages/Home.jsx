@@ -30,7 +30,7 @@ export default function Home() {
       {/* 🏆 Bloc Weekly Tournaments */}
       <div className="relative z-10 bg-[#111827]/90 rounded-2xl p-6 w-full max-w-md shadow-lg text-center">
         <img
-          src="/tournois-banner.png"
+          src="/avatars/tournois-banner.png"
           alt="Tournament Banner"
           className="w-full rounded-xl mb-4"
         />
