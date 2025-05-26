@@ -9,12 +9,11 @@ export default function Home() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* 🎨 Overlay sombre allégé pour laisser ressortir le fond */}
+      {/* 🎨 Overlay sombre allégé */}
       <div className="absolute inset-0 bg-black/30 z-0"></div>
 
       {/* 🔥 Contenu principal */}
       <div className="relative z-10 text-center">
-        {/* 🔥 Logo + slogan */}
         <img
           src="/avatars/logo-cdesport.png"
           alt="CDesport Logo"
@@ -31,7 +30,7 @@ export default function Home() {
       {/* 🏆 Bloc Weekly Tournaments */}
       <div className="relative z-10 bg-[#111827]/90 rounded-2xl p-6 w-full max-w-md shadow-lg text-center">
         <img
-          src="/tournament-placeholder.jpg"
+          src="/tournament-banner.jpg"
           alt="Tournament Banner"
           className="w-full rounded-xl mb-4"
         />
