@@ -12,11 +12,10 @@ import ClassementGlobal from "./pages/ClassementGlobal";
 import Support from "./pages/Support";
 import AuthForm from "./components/AuthForm";
 import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
-import ResetPasswordCode from "./pages/ResetPasswordCode"; // ✅ ajoutée
+import ResetPassword from "./pages/ResetPassword"; // ✅ utilisée pour 2 routes
 import ResetSuccess from "./pages/ResetSuccess";
 import AdminPanel from "./pages/AdminPanel";
-import ConfirmCode from "./pages/ConfirmCode"; // ✅ confirmation par code
+import ConfirmCode from "./pages/ConfirmCode";
 
 // Utils
 import { fetchUserProfile } from "./services/api";
@@ -88,7 +87,7 @@ function App() {
             <Route path="/signup" element={<AuthForm setIsAuthenticated={setIsAuthenticated} />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
-            <Route path="/reset-password-code" element={<ResetPasswordCode />} /> {/* ✅ nouvelle méthode */}
+            <Route path="/reset-password-code" element={<ResetPassword />} /> {/* ✅ même composant réutilisé */}
             <Route path="/reset-success" element={<ResetSuccess />} />
 
             {/* Email confirmation */}
